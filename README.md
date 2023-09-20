@@ -8,6 +8,8 @@ Usage is fairly simple.
 
 Any `comparable` can be used as a key, booleans(although not recommended lol), numbers, strings, pointers, channels, arrays and structs.
 
+I could limit the types of key but I wanted flexibility a little too much :)
+
 ```go
 package main
 
