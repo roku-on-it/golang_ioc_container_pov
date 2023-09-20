@@ -1,6 +1,6 @@
 # Proof of Concept IoC Container
 
-A simple IoC container for Go.
+A simple IoC container written in Go.
 <hr>
 This is a learning project that demonstrates the concept of Inversion of Control (IoC) containers in Go.
 
