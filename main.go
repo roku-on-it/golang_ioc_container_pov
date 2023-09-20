@@ -15,7 +15,7 @@ func main() {
 	i := 1
 	app := fiber.New()
 
-	di.Add("pizzaService", di.Singleton, func() *PizzaService {
+	di.Add("pizzaSrv", di.Singleton, func() *PizzaService {
 		return &PizzaService{Id: uuid.New()}
 	})
 
@@ -28,12 +28,12 @@ func main() {
 	*/
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		usrSrv := di.Resolve[*PizzaService]("usrSrv")
+		pizzaSrv := di.Resolve[*PizzaService]("pizzaSrv")
 
 		// Again, this could be done like this if registered with the respective struct as the key:
-		//usrSrv := di.Resolve[*PizzaService](PizzaService{})
+		//pizzaSrv := di.Resolve[*PizzaService](PizzaService{})
 
-		fmt.Println("Request:", i, usrSrv.Id)
+		fmt.Println("Request:", i, pizzaSrv.Id)
 		i++
 
 		return nil
