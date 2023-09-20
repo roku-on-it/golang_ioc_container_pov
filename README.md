@@ -71,6 +71,6 @@ func main() {
 
 This is hardly a complete implementation of an IoC container.
 
-I'm still not sure if _Dependency Injection_ is recommended in Go since it's claimed that Go should stay simple but this little project was a good start for me to learn the concept nonetheless.
+I'm still not sure if _Dependency Injection_ or _IoC_ is recommended in Go since it's claimed that Go should stay simple but this little project was a good start for me to learn the concept nonetheless.
 
 Open to any suggestions and improvements.
