@@ -41,12 +41,12 @@ func main() {
 	*/
 
 	app.Get("/", func(c *fiber.Ctx) error {
-		usrSrv := di.Resolve[*PizzaService]("usrSrv")
+		pizzaService := di.Resolve[*PizzaService]("pizzaService")
 
 		// Again, this could be done like this if registered with the respective struct as the key:
-		//usrSrv := di.Resolve[*PizzaService](PizzaService{})
+		//pizzaService := di.Resolve[*PizzaService](PizzaService{})
 
-		fmt.Println("Request:", i, usrSrv.Id)
+		fmt.Println("Request:", i, pizzaService.Id)
 		i++
 
 		return nil
